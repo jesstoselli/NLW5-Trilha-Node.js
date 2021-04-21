@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { SettingsService } from "../services/SettingsService";
 
-export class SettingsController {
+class SettingsController {
   async create(req: Request, res: Response) {
     const { chat, username } = req.body;
 
@@ -18,3 +18,4 @@ export class SettingsController {
     }
   }
 }
+export { SettingsController };
