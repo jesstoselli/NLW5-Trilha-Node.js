@@ -14,8 +14,12 @@ app.set("views", path.join(__dirname, "..", "public"));
 app.engine("html", require("ejs").renderFile);
 app.set("view engine", "html");
 
-app.get("/pages/client", (req, res) => {
+app.get("/pages/client", (_, res) => {
   return res.render("html/client.html");
+});
+
+app.get("/pages/admin", (_, res) => {
+  return res.render("html/admin.html");
 });
 
 const http = createServer(app); // Criando protocolo http
